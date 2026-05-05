@@ -59,3 +59,12 @@
 div > i {
     color: var(--accent);
 }
+
+.card-text a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.card-text a:hover {
+    color: var(--accent-dark);
+}
