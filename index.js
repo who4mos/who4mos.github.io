@@ -17,6 +17,12 @@ const projects = [
         tags: ["C", "Data Strucutes"],
         description: "In this problem set i had to implement a hash table in C, for a spell check program.",
         url: "https://github.com/who4mos/cs50/blob/main/week-5/speller/dictionary.c"
+    },
+    {
+        title: "FlagRa",
+        tags: ["Front End", "Back End", "Python", "Flask"],
+        description: "A Flag Guessing game written in Flask, making use of the <a href='https://restcountries.com/' target='_blank'>REST Countries API</a>",
+        url: "https://github.com/who4mos/FlagRa"
     }
 ];
 
