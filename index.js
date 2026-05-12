@@ -4,25 +4,26 @@ const projects = [
         title: "This Website",
         tags: ["Front End"],
         description: "A responsive portfolio built from scratch using Bootstrap, HTML, and JavaScript to showcase my projects",
-        url: "https://who4mos.github.io"
+        github_url: "https://who4mos.github.io"
     },
     {
         title: "Hall Of Prophecy",
         tags: ["Python", "SQLite3", "CSV"],
         description: "A program that reads a CSV file, and create a database with multiple tables and relationships, not only one big table as provided. Here i've not used CS50's python library and managed to use sqlite3 python modul for a real-world scenario.",
-        url: "https://github.com/who4mos/cs50/tree/main/after-week-7/prophecy"
+        github_url: "https://github.com/who4mos/cs50/tree/main/after-week-7/prophecy"
     },
     {
         title: "Speller",
         tags: ["C", "Data Strucutes"],
         description: "In this problem set i had to implement a hash table in C, for a spell check program.",
-        url: "https://github.com/who4mos/cs50/blob/main/week-5/speller/dictionary.c"
+        github_url: "https://github.com/who4mos/cs50/blob/main/week-5/speller/dictionary.c"
     },
     {
         title: "FlagRa",
-        tags: ["Front End", "Back End", "Python", "Flask"],
-        description: "A Flag Guessing game written in Flask, making use of the <a href='https://restcountries.com/' target='_blank'>REST Countries API</a>",
-        url: "https://github.com/who4mos/FlagRa"
+        tags: ["Full Stack", "Python", "Flask", "Redis", "REST API"],
+        description: "An interactive flag guessing game built with Flask. Uses the <a href='https://restcountries.com/' target='_blank'>REST Countries API</a> for flag data and Flask-Session with Redis (production) / filesystem (dev) for smooth session handling.",
+        github_url: "https://github.com/who4mos/FlagRa",
+        site_url: "https://flagra.onrender.com/"
     }
 ];
 
@@ -84,10 +85,19 @@ for (let i = 0; i < projects.length; i++) {
         let tag = projects[i]["tags"][j]
         card_content += `<span class="badge text-bg-accent">${tag}</span>`
     }
-    
+
     card_content += `</div>
     <p class="card-text">${projects[i]["description"]}</p>
-    <a class="btn btn-outline-light align-self-start mt-auto" href="${projects[i]["url"]}" target="_blank">GitHub</a>
+    <div class="d-flex gap-2 mt-auto">
+    <a class="btn btn-outline-light" href="${projects[i]["github_url"]}" target="_blank">GitHub</a>`
+
+    console.log("site_url" in projects[i]);
+    if ("site_url" in projects[i]) {
+        card_content += `<a class="btn btn-outline-light" href="${projects[i]["site_url"]}" target="_blank">Project's Site</a>`
+    }
+
+    card_content += `
+    </div>
     </div>
     </div>
     </div>`;
