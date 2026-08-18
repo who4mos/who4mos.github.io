@@ -20,10 +20,16 @@ const projects = [
     },
     {
         title: "FlagRa",
-        tags: ["Full Stack", "Python", "Flask", "Redis", "REST API"],
-        description: "An interactive flag guessing game built with Flask. Uses the <a href='https://restcountries.com/' target='_blank'>REST Countries API</a> for flag data and Flask-Session with Redis (production) / filesystem (dev) for smooth session handling.",
+        tags: ["Full Stack", "Python", "Flask", "ORM", "Redis", "REST API", "SQLite3", "PostgreSQL"],
+        description: "An interactive flag guessing game built with Flask. Uses the <a href='https://restcountries.com/' target='_blank'>REST Countries API</a> for flag data and Flask-Session with Redis (production) / filesystem (dev) for smooth session handling. The game allows user registration and log in and implements match history and leaderboards using SQLAlchemy with SQLite3 (local) and PostgreSQL (production).",
         github_url: "https://github.com/who4mos/FlagRa",
         site_url: "https://flagra.onrender.com/"
+    },
+    {
+        title: "Rock Server Socket",
+        tags: ["Sockets", "Networking", "TCP/IP", "Python", "Backend"],
+        description: "A HTTP server built from scratch using Python's native socket module. Handles TCP request parsing, HTTP response header construction, URL routing, and cookie-based player sessions for multiplayer game rooms, paired with JavaScript front-end utilizing short polling for real-time updates.",
+        github_url: "https://github.com/who4mos/rock-server-sockets"
     }
 ];
 
